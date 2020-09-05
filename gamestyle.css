@@ -1,0 +1,244 @@
+
+/* all for mobile */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    height: 120vh;
+    color: white;
+    background-image: linear-gradient(147deg, #ffc93c 0%, #434343 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+
+    background-color: #494935;
+}
+
+/* images */
+
+img {
+    margin-top: 0.7rem;
+    width: 50vw;
+    height: 50vw;
+    display: block;
+    margin-left: 4.5rem;
+    border-radius: 10%;
+}
+
+/* progress bar begins */
+
+progress {
+    margin-top: 0.4rem;
+    -webkit-appearance: none;
+    width: 40vw;
+    height: 3.9vh;
+    border-radius: 15px;
+}
+
+::-webkit-progress-bar {
+    background-color: rgb(228, 211, 228);
+    border-radius: 15px;
+}
+
+::-moz-progress-bar {
+    background-color: rgb(228, 211, 228);
+    border-radius: 15px;
+}
+
+::-webkit-progress-value {
+    background: #20a020;
+    border-radius: 15px;
+}
+
+/* progress bar ends */
+
+/* all structuring */
+
+.container {
+    font-size: 1.2rem;
+    color: rgb(240, 240, 39);
+}
+
+.container h3 {
+    font-size: 1.3rem;
+}
+
+.container h3 span {
+    color: #00acee;
+}
+
+.questionandoptions {
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+.score {
+    margin-top: 0.9rem;
+    font-size: 1.7rem;
+}
+
+.score span {
+    font-size: 1.8rem;
+    color: #00FF00;
+}
+
+.question h2:first-child {
+    margin-bottom: 1rem;
+}
+
+/* styling the options */
+
+.options {
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.options li {
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+    display: block;
+    padding: 0.8rem;
+    background-color: rgb(255, 255, 255);
+}
+
+/* timer */
+
+.timer {
+    padding: 0.3rem;
+    position: absolute;
+    right: 1rem;
+    top: 6.6rem;
+    font-size: 1.4rem;
+    border: 2px solid rgb(68, 66, 66);
+    border-radius: 20px;
+}
+
+.timerseconds {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: rgb(44, 255, 44);
+}
+.lowontime{
+    color: red;
+}
+
+.timer i {
+    color:  greenyellow;
+}
+
+
+/* for PC */
+
+@media only screen and (min-width:600px) {
+    .header {
+        justify-content: space-between;
+        padding: 1.1rem 2rem 1.1rem 2.4rem;
+    }
+    /* images */
+    img {
+        margin-top: 0.9rem;
+        width: 18vw;
+        height: 18vw;
+        display: block;
+        margin: auto;
+        border-radius: 10%;
+    }
+    /* progress bar begins */
+    progress {
+        width: 23vw;
+        height: 3.6vh;
+        border-radius: 15px;
+    }
+    ::-webkit-progress-bar {
+
+        border-radius: 15px;
+    }
+    ::-moz-progress-bar {
+
+        border-radius: 15px;
+    }
+    ::-webkit-progress-value {
+
+        border-radius: 15px;
+    }
+    /* progress bar ends */
+    .score {
+        margin-right: 3rem;
+        margin-top: 0.3rem;
+        font-size: 2.1rem;
+    }
+    .score span {
+        font-size: 2.6rem;
+
+    }
+    .container h3 {
+        font-size: 1.5rem;
+    }
+    .questionandoptions {
+        margin-top: 1rem;
+        margin-left: 1.3rem;
+        margin-right: 1.3rem;
+        font-size: 1.3rem;
+    }
+    .question h2:first-child {
+        margin-bottom: 0.3rem;
+    }
+    .question{
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+    .options li {
+        margin-top: 0.6 rem;
+        width: 40vw;
+        margin-right: 1rem;
+       margin-left: 5rem;
+        border-radius: 15px;
+        margin-bottom: 1.0rem;
+        display: inline-block;
+        padding: 1.2rem;
+        background-color: rgb(255, 255, 255);
+    }
+    .leftside{
+        margin-right: 0.4rem;
+    }
+    /* timer */
+    .timer {
+        padding: 1.2rem;
+        right: 7rem;
+        top: 8.6rem;
+        font-size: 2.0rem;
+    }
+    
+    .timerseconds {
+
+        font-size: 2.4rem;
+
+    }
+    .questiondisplay{
+        width: 80vw;
+    }
+}
+
+.options .clicked{
+    color: white;
+    background-color: red;
+}
+.options .right{
+    color: white;
+    background-color: rgb(27, 209, 27);
+}
