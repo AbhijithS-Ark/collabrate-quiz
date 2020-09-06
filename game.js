@@ -120,6 +120,8 @@ options.addEventListener("click", (e) => {
         else {
             console.log("this faltu");
             //jump to end html file which is to be created
+            window.location.assign('/end.html')    
+
             // window.location.href = "end.html"
         }
     }
@@ -190,9 +192,7 @@ const displayquestions = () => {
         //go to end page
         console.log("triggered");
         // window.location.href = "end.html"
-
-        //delete this later
-        alert("now jump to end.html")
+        window.location.assign('/end.html')    
     }
     if (question < 6) {
         displayquestionnumber.textContent = question;
