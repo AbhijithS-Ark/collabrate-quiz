@@ -1,358 +1,408 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
-
-
-
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:'Oleo Script',cursive;
+    font-family: 'Oleo Script', cursive;
 }
+
 /*wallpaper animation for all backgrounds*/
-.wallpaper{
-   width:100vw;
-   height:100vh;
-   background:linear-gradient(-45deg,#f19c81,#E73C7E,#095bf3,#0ff3af,#1de2c8);
-   position:relative;
-   background-size:400% 400%;
-   animation:change 10s ease-in-out infinite;
-   margin:0;
-   padding:0;
-   overflow:hidden;
-}
-@keyframes change{
-    0%{
-        background-position:0 50%;
 
+.wallpaper {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #f19c81, #E73C7E, #095bf3, #0ff3af, #1de2c8);
+    position: relative;
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
     }
-    50%{
-        background-position:100% 50%;
+    50% {
+        background-position: 100% 50%;
     }
-    100%
-    {
-        background-position:0 50%;
+    100% {
+        background-position: 0 50%;
     }
 }
+
 /*this part is the wallpaper animation */
-/*logo animation*/
-.anim{
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    padding:4rem;
-    margin:0 0 0.5rem 0 ;
-    font-size:6rem;
 
+/*logo animation*/
+
+.anim {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    padding: 4rem;
+    margin: 0 0 0.5rem 0;
+    font-size: 6rem;
 }
-.anim li{
-     list-style:none;
-     transition:1.5s;
-     letter-spacing:3px;
-     color:#fff;
-     -webkit-box-reflect:below -40px linear-gradient(transparent,rgba(0,0,0,0.2));
-     
+
+.anim li {
+    list-style: none;
+    transition: 1.5s;
+    letter-spacing: 3px;
+    color: #fff;
+    -webkit-box-reflect: below -40px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
-.anim:hover li{
+
+.anim:hover li {
     transform: rotate(65deg) translateY(-15rem);
-    opacity:0;
+    opacity: 0;
     filter: blur(1.5rem);
 }
-.anim:hover::after{
+
+.anim:hover::after {
     transform: scale(0.9);
-    transition-delay:0.5s;
-    opacity:0.8;
-}
-li:nth-child(1){
-  transition-delay:0;
+    transition-delay: 0.5s;
+    opacity: 0.8;
 }
 
+li:nth-child(1) {
+    transition-delay: 0;
+}
 
-li:nth-child(1){
-    transition-delay:0.2s;
-  }
-  
-  li:nth-child(2){
-    transition-delay:0.4s;
-  }
-  li:nth-child(3){
-    transition-delay:0.6s;
-  }
+li:nth-child(1) {
+    transition-delay: 0.2s;
+}
 
-  li:nth-child(4){
-    transition-delay:0.8s;
-  }
+li:nth-child(2) {
+    transition-delay: 0.4s;
+}
 
-  li:nth-child(5){
-    transition-delay:1s;
-  }
-  li:nth-child(6){
-    transition-delay:1.2s;
-  }
-  li:nth-child(7){
-    transition-delay:1.4s;
-  }
+li:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+li:nth-child(4) {
+    transition-delay: 0.8s;
+}
+
+li:nth-child(5) {
+    transition-delay: 1s;
+}
+
+li:nth-child(6) {
+    transition-delay: 1.2s;
+}
+
+li:nth-child(7) {
+    transition-delay: 1.4s;
+}
 
 /*separated to avoid confusion of using scaling */
+
 /*are you ready? animation*/
-.tagline{
-    font-size:3rem;
-    color:#fff;
-    margin:0 0 3rem 0;
-}
+
 .tagline {
-    transition:all 0.3s ease-in;     
-     transform:scale(1);
-}
-.tagline:hover{
-    transform:scale(1.1);
+    font-size: 3rem;
+    color: #fff;
+    margin: 0 0 3rem 0;
 }
 
+.tagline {
+    transition: all 0.3s ease-in;
+    transform: scale(1);
+}
+
+.tagline:hover {
+    transform: scale(1.1);
+}
 
 /*container used for index.html and end.html*/
-.container{
-    position:relative;
-    width:100%;
-    height:100vh;
-    display:flex;
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
-    align-items:center;
-    margin:auto;
-    padding:2rem;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
     text-align: center;
-    flex-direction:column;
+    flex-direction: column;
     max-width: 40rem;
 }
+
 /*button animation common for entire quiz*/
-.button1{
-    border:2px  solid #fff;
-    text-decoration:none;
-    font-size:2.5rem;
-    margin:0 0 2rem 0;
-    padding:5px 7px;
-    width:300px;
-    height:70px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow: 3px 1px 7.5px 4px  #fff;
-    cursor:pointer;
-    overflow:hidden;
-}
-.button2{
-    border:2px  solid #fff;
-    text-decoration:none;
-    font-size:2.5rem;
-    margin:0 0 2.5rem 0;
-    padding:8px 6px;
-    width:300px;
-    height:70px;
-    border-radius:10px;
-   cursor:pointer;
-   box-shadow: 3px 1px 7.5px 4px  #fff;
-   overflow:hidden;
-}
-.btn1{
-    color:#fff;
-transform:scale(1);
-transition: all 0.3s ease-in;
-}
-.btn1:hover{
-    color:#000;
- transform:scale(1.1);
-}
-.button1::before{
-    content: "";
-    position: absolute;
-    left:0;
-    width:100%;
-    height:0%;
-    background:linear-gradient(to right,#ff105f,#ffad06);
-    z-index:-1;
-    transition: 0.8s;
-}
-.btn1::before{
-   top:0;
-   border-radius: 0 0 50% 50%;
-}
-.btn1:hover::before{
-    height:180%;
+
+.button1 {
+    border: 2px solid #fff;
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin: 0 0 2rem 0;
+    padding: 5px 7px;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 1px 7.5px 4px #fff;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.btn2{
-    color:#fff;
-transform:scale(1);
-transition: all 0.3s ease-in;
+.button2 {
+    border: 2px solid #fff;
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin: 0 0 2.5rem 0;
+    padding: 8px 6px;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 1px 7.5px 4px #fff;
+    overflow: hidden;
 }
-.btn2:hover{
-    color:yellow;
- transform:scale(1.1);
+
+.btn1 {
+    color: #fff;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
 }
-.button2::before{
+
+.btn1:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.button1::before {
     content: "";
     position: absolute;
-    left:0;
-    width:100%;
-    height:0%;
-    background:linear-gradient(to right,#0c0c0c,#06ffea);
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
     z-index: -1;
     transition: 0.8s;
 }
-.btn2::before{
-   top:0;
-   border-radius: 0 0 50% 50%;
-}
-.btn2:hover::before{
-    height:180%;
-}
-/*end of button animation*/
-/*end-form css for end.html*/
-.finalscore{
-    position:relative;
-    color:linen;
-    font-size:3rem;
-    margin-bottom:3rem;
-    cursor:default;
+
+.btn1::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
 }
 
-.username{
-    color:#fff;
-    font-size:2rem;
-    margin-bottom:1rem;
-    cursor:default;
+.btn1:hover::before {
+    height: 180%;
 }
 
-.end-form{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:100%;
+.btn2 {
+    color: #fff;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
 }
 
-input{
-    width:53%;
-    border:none;
-    outline:none;
-    padding:10px 5px ; 
-    margin-bottom:1rem;
-    border-radius:10px;
-    font-size:1.2rem;
-}
-/*save button css and animation*/
-.save{
-    border:2px solid #fff;
-    background:none;
-    width:12rem;
-    height:3.3rem;
-    margin-bottom:2rem;
-    border-radius:7px;
-    font-size:2.5rem;
-    cursor:pointer;
-    box-shadow: 3px 1px 7px 3px  #fff;
-    color:#fff;
-    text-align:center;
-    outline:none;
-    overflow:hidden;
+.btn2:hover {
+    color: yellow;
+    transform: scale(1.1);
 }
 
-.btn{
-    color:#fff;
-transform:scale(1);
-transition: all 0.3s ease-in;
-}
-.btn:hover{
-    color:#000;
- transform:scale(1.1);
-}
-.save::before{
+.button2::before {
     content: "";
     position: absolute;
-    left:0;
-    width:100%;
-    height:0%;
-    background:linear-gradient(to right,#ff105f,#ffad06);
-    z-index:-1;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to right, #0c0c0c, #06ffea);
+    z-index: -1;
     transition: 0.8s;
 }
-.btn::before{
-   top:0;
-   border-radius: 0 0 50% 50%;
-}
-.btn:hover::before{
-    height:180%;
+
+.btn2::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
 }
 
-::placeholder{
-    color:#aaa;
+.btn2:hover::before {
+    height: 180%;
+}
+
+/*end of button animation*/
+
+/*end-form css for end.html*/
+
+.finalscore {
+    position: relative;
+    color: linen;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    cursor: default;
+}
+
+.username {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+
+.end-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    width: 53%;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/*save button css and animation*/
+
+.save {
+    border: 2px solid #fff;
+    background: none;
+    width: 12rem;
+    height: 3.3rem;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    box-shadow: 3px 1px 7px 3px #fff;
+    color: #fff;
+    text-align: center;
+    outline: none;
+    overflow: hidden;
+}
+
+.btn {
+    color: #fff;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.save::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn:hover::before {
+    height: 180%;
+}
+
+::placeholder {
+    color: #aaa;
 }
 
 /* social icons animation with footer*/
-.social-icons{
-    position:relative;
-    height:60px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:none;
-    
+
+.social-icons {
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
 }
-.icon1,.icon2{
-font-size:2.5rem;
-color:#fff;
-margin:2rem;
-transform:scale(1);
-transition: all 0.3s ease-in;
+
+.icon1, .icon2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 2rem;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
 }
-.icon1:hover,.icon2:hover{
- transform:scale(1.3); 
+
+.icon1:hover, .icon2:hover {
+    transform: scale(1.3);
 }
 
 /*highscores css styling*/
-.container1{
-    position:relative;
-    width:100%;
-    height:100vh;
-    display:flex;
+
+.container1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
-    align-items:center;
-    margin:auto;
+    align-items: center;
+    margin: auto;
     text-align: center;
-    flex-direction:column;
+    flex-direction: column;
     max-width: 40rem;
 }
-#finalscore{
-    margin:0 0 2rem 0;
-    font-size:4rem;
-    color:#000;
-}
-#highscorelist{
-    list-style:none;
-    margin-bottom:3rem;
+
+#finalscore {
+    margin: 0 0 2rem 0;
+    font-size: 4rem;
+    color: #000;
 }
 
+#highscorelist {
+    list-style: none;
+    margin-bottom: 3rem;
+}
 
-/*media query  common for  entire quiz*/ 
+/*media query  common for  entire quiz*/
 
-@media only screen and (max-width:600px){
-     .anim{
-         font-size:4.5rem;
-     }
-     .tagline{
-         font-size:2.0rem;
-     }
-     .button1{
-         width:60vw;
-         font-size:2.5rem;
-     }
-     .button2{
-         width:60vw;
-         font-size:2.5rem;
-     }
-     .save{
-         width:40vw;
-     }
-     input{
-         width:60vw;
-     }
-     #finalscore{
-         font-size:3rem;
-     }
+@media only screen and (max-width:600px) {
+    .anim {
+        font-size: 4.5rem;
+    }
+    .tagline {
+        font-size: 2.0rem;
+    }
+    .button1 {
+        width: 60vw;
+        font-size: 2.5rem;
+    }
+    .button2 {
+        width: 60vw;
+        font-size: 2.5rem;
+    }
+    .save {
+        width: 40vw;
+    }
+    input {
+        width: 60vw;
+    }
+    #finalscore {
+        font-size: 3rem;
+    }
+}
+
+
+
+.listitems {
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+    
+.scoredisplay{
+    text-align: end;
+}
+.headers {
+    color: red;
+    font-size: 1.5rem;
 }
