@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Oleo Script',cursive , sans-serif ;
 }
 
 /*wallpaper animation for all backgrounds*/
@@ -182,11 +183,11 @@ li:nth-child(7) {
     height: 0%;
     background: linear-gradient(to right, #ff105f, #ffad06);
     z-index: -1;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
 .btn1::before {
-    top: 0;
+    top:0;
     border-radius: 0 0 50% 50%;
 }
 
@@ -213,7 +214,7 @@ li:nth-child(7) {
     height: 0%;
     background: linear-gradient(to right, #0c0c0c, #06ffea);
     z-index: -1;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
 .btn2::before {
@@ -233,7 +234,7 @@ li:nth-child(7) {
     position: relative;
     color: linen;
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.6rem;
     cursor: default;
 }
 
@@ -282,7 +283,7 @@ input {
 .btn {
     color: #fff;
     transform: scale(1);
-    transition: all 0.3s ease-in;
+    transition: all 100ms ease-in;
 }
 
 .btn:hover {
@@ -353,15 +354,31 @@ input {
 }
 
 #finalscore {
-    margin: 0 0 2rem 0;
+    margin: 0 0 3rem 0;
     font-size: 4rem;
-    color: #000;
+    color:#fff;
 }
 
 #highscorelist {
     list-style: none;
-    margin-bottom: 3rem;
+    margin-bottom:2rem;
+    color:#fff;
+    position:relative;
 }
+
+.headers{
+    font-size:30px;
+
+}
+.listitems{
+    font-size:2rem;
+    text-align:left;
+}
+.scoredisplay{
+    position:absolute;
+    left:80%;
+}
+
 
 /*media query  common for  entire quiz*/
 
@@ -370,15 +387,15 @@ input {
         font-size: 4.5rem;
     }
     .tagline {
-        font-size: 2.0rem;
+        font-size: 2.2rem;
     }
     .button1 {
         width: 60vw;
-        font-size: 2.5rem;
+        font-size: 40px;
     }
     .button2 {
-        width: 60vw;
-        font-size: 2.5rem;
+        width: 70vw;
+        font-size: 37px;
     }
     .save {
         width: 40vw;
@@ -387,22 +404,15 @@ input {
         width: 60vw;
     }
     #finalscore {
-        font-size: 3rem;
+        font-size:3rem;
+    }
+    .finalscore{
+        font-size:2rem;
+    }
+    .username{
+        font-size:30px;  
     }
 }
 
 
 
-.listitems {
-    color: white;
-    margin-top: 1rem;
-    font-size: 1.3rem;
-}
-    
-.scoredisplay{
-    text-align: end;
-}
-.headers {
-    color: red;
-    font-size: 1.5rem;
-}

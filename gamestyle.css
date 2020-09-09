@@ -11,7 +11,7 @@
 body {
     height: 120vh;
     color: white;
-    background-image: linear-gradient(147deg, #ffc93c 0%, #434343 74%);
+    background-image: linear-gradient(147deg, #fcc332 0%, #0c6e81 74%);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -19,9 +19,10 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
-    padding-top: 1.1rem;
-    padding-bottom: 1.1rem;
-    background-color: #494935;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #080749;
+    box-shadow:1px 1px 1px 1px rgb(211, 203, 203);
 }
 
 /* images */
@@ -115,33 +116,184 @@ progress {
     background-color: rgb(255, 255, 255);
 }
 
-/* timer */
+/* timer animation for mobile devices */
 
 .timer {
     padding: 0.3rem;
+    width:6.5rem;
+    height:3.3rem;
     position: absolute;
-    right: 1rem;
-    top: 6.6rem;
+    left:70%;
+    top: 6.3rem;
     font-size: 1.4rem;
-    border: 2px solid rgb(68, 66, 66);
+    box-shadow:1px 2px 1px 1px #10aac9;
     border-radius: 20px;
+    background:#000;
+
 }
 
 .timerseconds {
+
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: rgb(44, 255, 44);
 }
 .lowontime{
+    padding:0 0 0 5px;
     color: red;
 }
 
-.timer i {
-    color:  greenyellow;
+.clock{
+    position:absolute;
+    top:50%;
+    left:71%;
+    width:40px;
+    transform:translate(-50% ,-50%);
+    height:40px;
+    border:3px solid #ff5f5f;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:-0.5px 0.5px 0 #e23232, inset 0 0 10px  rgba(0,0,0,0.5);
+}
+.clock:before{
+   content:'';
+   position:absolute;
+   top:calc(50% - 2px);
+   left:50%;
+   width:40%;
+   height:2px;
+   background:#262626;
+   border-radius:5px;
+   animation: animate 25s linear infinite;
+   transform-origin:left;
+}
+.clock:after{
+   content:'';
+   position:absolute;
+   top:calc(50% - 2px);
+   left:50%;
+   width:30%;
+   height:2px;
+   background:#262626;
+   border-radius:5px;
+   animation: animate 40s linear infinite;
+   transform-origin:left;
+}
+                           
+.time1{
+    position:absolute;
+    background-color:rgb(78, 76, 76);
+    height:5px;
+    width:2px;
+    left:50%;
+    top:3.55%;
+    transform:translate(-50%,1%);
+}
+.time2{
+    position:absolute;
+    background-color:rgb(78, 76, 76);
+    height:2px;
+    width:5px;
+    left:85%;
+    top:calc(50% - 1px);
+    
 }
 
+.time3{
+    position:absolute;
+    background-color:rgb(78, 76, 76);
+    height:5px;
+    width:2px;
+    left:49.55%;
+    top:85%;
+    transform:translate(-50%,1%);
+}
 
-/* for PC */
+.time4{
+    position:absolute;
+    background-color:rgb(78,76,76);
+    height:2px;
+    width:5px;
+    left:5%;
+    top:calc(50% - 1px);
+    transform:translate(-50%,1%);
+}
+
+.secondhand{
+    position:absolute;
+    background-color:#e23232;
+    height:2px;
+    width:41%;
+    top:calc(50% - 1px);
+    left:40%;
+    animation: second 35s steps(60 , end) infinite;
+    transform-origin:24% 70%;
+    z-index:1;
+}
+
+.button1{
+    background-color:#fff;
+    height:5px;
+    width:11px;
+    position:absolute;
+    left:50%;
+    top:-25%;
+    border-radius:35%;
+    transform:translate(-50% , 45%);
+
+}
+
+.button1:before{
+    content:'';
+    position:absolute;
+    height:6px;
+    width:3.5px;
+    left:3.7px;
+    top:50%;
+    background:lavenderblush;
+}
+.button2{
+    background-color:#fafcf7;
+    height:4px;
+    width:8px;
+    position:absolute;
+    left:33px;
+    transform:rotate(47deg);
+}
+.button-center{
+    display:block;
+    position: absolute;
+    top:50%;
+    left:70%;
+    transform:translate(-50% , -50%);
+    width:5px;
+    height:5px;
+    background:#ff5f5f;
+    border-radius:50%;
+    z-index:1;
+}
+@keyframes animate{
+    0%
+    {
+        transform:rotate(-90deg);
+    }
+    100%
+    {
+        transform:rotate(270deg);
+    }
+
+}
+ @keyframes second{
+     0%{
+         transform:rotate(0deg);
+     }
+     100%{
+         transform:rotate(360deg);
+     }
+ }
+
+/*timer animatins ends */
+/* for PC media query changes */
 
 @media only screen and (min-width:600px) {
     .header {
@@ -215,11 +367,13 @@ progress {
     .leftside{
         margin-right: 0.4rem;
     }
-    /* timer */
+    /* timer for pc and tablets */
     .timer {
         padding: 1.2rem;
-        right: 7rem;
-        top: 8.6rem;
+        width:9.5rem;
+        height:5.5rem;
+        left:84.5%;
+        top: 7rem;
         font-size: 2.0rem;
     }
     
@@ -231,8 +385,160 @@ progress {
     .questiondisplay{
         width: 80vw;
     }
-}
+    
+    .clock{
+        position:absolute;
+        top:50%;
+        left:70%;
+        width:55px;
+        transform:translate(-50% ,-50%);
+        height:55px;
+        border:3px solid #ff5f5f;
+        border-radius:50%;
+        background:#fff;
+        box-shadow:-0.5px 0.5px 0 #e23232, inset 0 0 10px  rgba(0,0,0,0.5);
+   
+   }
+   .clock:before{
+       content:'';
+       position:absolute;
+       top:calc(50% - 2px);
+       left:50%;
+       width:40%;
+       height:3px;
+       background:#262626;
+       border-radius:5px;
+       animation: animate 25s linear infinite;
+       transform-origin:left;
+   }
+   .clock:after{
+       content:'';
+       position:absolute;
+       top:calc(50% - 2px);
+       left:50%;
+       width:30%;
+       height:3px;
+       background:#262626;
+       border-radius:5px;
+       animation: animate 40s linear infinite;
+       transform-origin:left;
+   }
+                                 
+   .time1{
+       position:absolute;
+       background-color:rgb(78, 76, 76);
+       height:5px;
+       width:2px;
+       left:50%;
+       top:0.5%;
+       transform:translate(-50%,1%);
+   }
+   .time2{
+       position:absolute;
+       background-color:rgb(78, 76, 76);
+       height:2.5px;
+       width:5px;
+       left:90%;
+       top:calc(50% - 1px);
+       
+   }
+   
+   .time3{
+       position:absolute;
+       background-color:rgb(78, 76, 76);
+       height:5px;
+       width:2.5px;
+       left:49.55%;
+       top:90%;
+       transform:translate(-50%,1%);
+   }
+   
+   .time4{
+       position:absolute;
+       background-color:rgb(78,76,76);
+       height:2.5px;
+       width:5px;
+       left:5%;
+       top:calc(50% - 1px);
+       transform:translate(-50%,1%);
+   }
+   
+   .secondhand{
+       position:absolute;
+       background-color:#e23232;
+       height:2px;
+       width:43%;
+       top:calc(50% - 1px);
+       left:40%;
+       animation: second 35s steps(60 , end) infinite;
+       transform-origin:24% 70%;
+       z-index:1;
+   }
+   
+   .button1{
+       background-color:#fff;
+       height:5px;
+       width:11px;
+       position:absolute;
+       left:50%;
+       top:-25%;
+       border-radius:35%;
+       transform:translate(-50% , 45%);
+   
+   }
+   
+   .button1:before{
+       content:'';
+       position:absolute;
+       height:6px;
+       width:3.5px;
+       left:3.55px;
+       top:50%;
+       background:lavenderblush;
+   }
+   .button2{
+       background-color:#fafcf7;
+       height:4px;
+       width:8px;
+       position:absolute;
+       left:46px;
+       transform:rotate(45deg);
+   }
+   .button-center{
+       display:block;
+       position: absolute;
+       top:50%;
+       left:70%;
+       transform:translate(-50% , -50%);
+       width:5px;
+       height:5px;
+       background:#ff5f5f;
+       border-radius:50%;
+       z-index:1;
+   }
+   @keyframes animate{
+       0%
+       {
+           transform:rotate(-90deg);
+       }
+       100%
+       {
+           transform:rotate(270deg);
+       }
+   }
+/*keyframes of timer ends */
 
+}
+/*added  keyframes of second hand*/
+@keyframes second{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+/*options work perfectly for both*/
 .options .clicked{
     color: white;
     background-color: red;
@@ -240,4 +546,3 @@ progress {
 .options .right{
     color: white;
     background-color: rgb(27, 209, 27);
-}
