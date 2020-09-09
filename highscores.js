@@ -38,8 +38,7 @@ if(currentscore != -2){
 }
 
 
-//delete this
-// localStorage.clear();
+
 //look into that page does not refresh while in highscore.js file or else null valu will be stored
 
 //display all the names

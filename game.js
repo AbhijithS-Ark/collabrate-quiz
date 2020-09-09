@@ -39,16 +39,17 @@ function countdowntimer() {
                     //remove previous question from array
                     currentarray.splice(randomnumber,1);
                     displayquestions();
-                    removeclasslist();
-                    countdown = 20;
+                   
+                    countdown = 21;
                     countdowntimer();
+                    removeclasslist();
                 }, 1500)
             }
         }
         if (countdown < 11) {
             seconds.classList.add("lowontime");
         }
-    }, 1000)
+    }, 800)
 }
 countdowntimer();
 //fetch all questions from json file and store them in array
@@ -204,6 +205,7 @@ const displayquestions = () => {
 }
 //function to remove the classlist(the red and green color on options)before displaying next question
 const removeclasslist = () => {
+    seconds.textContent = `20`;
     optionslist.forEach((option) => {
         option.classList.remove("clicked");
         option.classList.remove("right");
